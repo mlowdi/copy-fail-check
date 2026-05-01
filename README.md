@@ -84,7 +84,7 @@ ssh target-host ./af_alg_check
 Until the kernel is patched, block the vulnerable algorithm from being loaded by unprivileged users:
 
 ```bash
-echo "install algif_aead /bin/true" > /etc/modprobe.d/cve-2026-31431.conf
+echo "install algif_aead /bin/false" > /etc/modprobe.d/cve-2026-31431.conf
 rmmod algif_aead 2>/dev/null
 ```
 
